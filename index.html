@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Fruit Catcher</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 id="score-txt">Score: 0</h1>
+    <h1 id="health-txt">Health: 2</h1>
     <canvas id="canvas"></canvas>
-    
-    <script src="fallingobjects.js"></script>
-      <script src="player.js"></script>
-      <script src="data.js"></script>
-      <script src="main.js"></script>
+
+    <script src="./src/models/fallingobjects.js"></script>
+    <script src="./src/models/player.js"></script>
+    <script src="data.js"></script>
+    <script src="./src/models/apple.js"></script>
+    <script src="./src/models/bomb.js"></script>
+    <script src="./src/main.js"></script>
   </body>
 </html>

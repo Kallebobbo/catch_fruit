@@ -14,6 +14,19 @@ body {
 canvas {
   height: 600px;
   width: 600px;
-  background-color: lightcoral;
-  
-},
+  background-color: lightblue;
+}
+
+#score-txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+#health-txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}

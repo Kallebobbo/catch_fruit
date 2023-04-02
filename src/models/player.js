@@ -12,6 +12,8 @@ class Player {
     this.x = x;
     this.v = v;
     this.HP = HP;
+    this.img = new Image();
+    this.img.src = "src/images/basket.png";
 
     this.y = 500;
     this.c = 0;
@@ -21,38 +23,33 @@ class Player {
 
   update() {
     if (r) {
-      this.x += this.v
+      this.x += this.v;
     }
 
     if (l) {
-      this.x -= this.v
+      this.x -= this.v;
     }
 
-    if(this.x + this.w > canvas.width){
-      this.x = canvas.width-this.w;
-    }else if(this.x < 0){
+    if (this.x + this.w > canvas.width) {
+      this.x = canvas.width - this.w;
+    } else if (this.x < 0) {
       this.x = 0;
-
     }
-
-
   }
 
   draw(ctx) {
     ctx.beginPath();
-    ctx.rect(this.x, this.y, this.w, this.h);
-    ctx.fill()
-
+    ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+    ctx.fill();
   }
 }
 
 document.addEventListener("keydown", function (event) {
   if (event.keyCode == 37) {
-    l = true
+    l = true;
   }
   if (event.keyCode == 39) {
-    r = true
-
+    r = true;
   }
 });
 
